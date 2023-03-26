@@ -1,8 +1,8 @@
 -- =============================================
 -- Change Tracking Framework for Microsoft SQL Server
--- Version 4.1, December 13, 2022
+-- Version 4.2, January 9, 2023
 --
--- Copyright 2017-2022 Gartle LLC
+-- Copyright 2017-2023 Gartle LLC
 --
 -- License: MIT
 -- =============================================

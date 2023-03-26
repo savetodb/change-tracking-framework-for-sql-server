@@ -1,15 +1,15 @@
 -- =============================================
 -- Change Tracking Framework for Microsoft SQL Server
--- Version 4.1, December 13, 2022
+-- Version 4.2, January 9, 2023
 --
 -- This script updates Change Tracking Framework to the latest version
 --
--- Copyright 2017-2022 Gartle LLC
+-- Copyright 2017-2023 Gartle LLC
 --
 -- License: MIT
 -- =============================================
 
-IF 401 <= COALESCE((SELECT CAST(LEFT(HANDLER_CODE, CHARINDEX('.', HANDLER_CODE) - 1) AS int) * 100 + CAST(RIGHT(HANDLER_CODE, LEN(HANDLER_CODE) - CHARINDEX('.', HANDLER_CODE)) AS float) FROM logs.handlers WHERE TABLE_SCHEMA = 'logs' AND TABLE_NAME = 'change_tracking_framework' AND COLUMN_NAME = 'version' AND EVENT_NAME = 'Information'), 0)
+IF 402 <= COALESCE((SELECT CAST(LEFT(HANDLER_CODE, CHARINDEX('.', HANDLER_CODE) - 1) AS int) * 100 + CAST(RIGHT(HANDLER_CODE, LEN(HANDLER_CODE) - CHARINDEX('.', HANDLER_CODE)) AS float) FROM logs.handlers WHERE TABLE_SCHEMA = 'logs' AND TABLE_NAME = 'change_tracking_framework' AND COLUMN_NAME = 'version' AND EVENT_NAME = 'Information'), 0)
     RAISERROR('Change Tracking Framework is up-to-date. Update skipped', 11, 0)
 GO
 
@@ -184,7 +184,7 @@ FROM
     UNION ALL SELECT N'logs', N'translations', NULL, N'License', NULL, NULL, N'ATTRIBUTE', N'EFglQsAqZ9PymMEje3CG+I+iPcEJupAblPbHdaFIxUHYnGG6SG92z1JML4U6EBeitdyUCQU6/Xxde4bDPdRYHASs2r4ugjJSfBve4tRdB+4Incth1bbGQ6EScIcCRJkZBGReNyd9oXly5GM3HRoLQLKuetLQ3ADHFCcJ64vKuJA=', NULL, NULL, NULL
     UNION ALL SELECT N'logs', N'usp_translations', NULL, N'License', NULL, NULL, N'ATTRIBUTE', N'K8PB5gwgoSm/ZA8hzm9g0sI3+caYn1s53a9GCkaWVIWJKjUfmyyF383Nzax5FLbvhYs6EoQp+6+kWt6B3KYlRP3hbL7DJ/S77HoCX/bGp5Xxdx2Hu1i5ggTXcM9PoSiwE3drSbzpEg5DDJSn+n/F+jQGz0iiEThKhhe3TYR/Dro=', NULL, NULL, NULL
     UNION ALL SELECT N'logs', N'workbooks', NULL, N'License', NULL, NULL, N'ATTRIBUTE', N'z3MFkOBHK9KXk5PSpMnd4Aq5x9VqArNqaV8NvcWQWVBQp783v85kdtYIL2PL2SlGcYsLYQL2PPcYXmSLIszu+pygp7rmtIn433KPQ+GVPLBNDXsCwkVGEEtXFcyB/LDPH8E1XWGi/eo6AStyDMaOgRVgd361ro8TB3ttcct5+4E=', NULL, NULL, NULL
-    UNION ALL SELECT N'logs', N'change_tracking_framework', N'version', N'Information', NULL, NULL, N'ATTRIBUTE', N'4.1', NULL, NULL, NULL
+    UNION ALL SELECT N'logs', N'change_tracking_framework', N'version', N'Information', NULL, NULL, N'ATTRIBUTE', N'4.2', NULL, NULL, NULL
     ) s
     INNER JOIN logs.handlers t ON
         t.TABLE_SCHEMA = s.TABLE_SCHEMA
@@ -276,7 +276,7 @@ FROM
     UNION ALL SELECT N'logs', N'translations', NULL, N'License', NULL, NULL, N'ATTRIBUTE', N'EFglQsAqZ9PymMEje3CG+I+iPcEJupAblPbHdaFIxUHYnGG6SG92z1JML4U6EBeitdyUCQU6/Xxde4bDPdRYHASs2r4ugjJSfBve4tRdB+4Incth1bbGQ6EScIcCRJkZBGReNyd9oXly5GM3HRoLQLKuetLQ3ADHFCcJ64vKuJA=', NULL, NULL, NULL
     UNION ALL SELECT N'logs', N'usp_translations', NULL, N'License', NULL, NULL, N'ATTRIBUTE', N'K8PB5gwgoSm/ZA8hzm9g0sI3+caYn1s53a9GCkaWVIWJKjUfmyyF383Nzax5FLbvhYs6EoQp+6+kWt6B3KYlRP3hbL7DJ/S77HoCX/bGp5Xxdx2Hu1i5ggTXcM9PoSiwE3drSbzpEg5DDJSn+n/F+jQGz0iiEThKhhe3TYR/Dro=', NULL, NULL, NULL
     UNION ALL SELECT N'logs', N'workbooks', NULL, N'License', NULL, NULL, N'ATTRIBUTE', N'z3MFkOBHK9KXk5PSpMnd4Aq5x9VqArNqaV8NvcWQWVBQp783v85kdtYIL2PL2SlGcYsLYQL2PPcYXmSLIszu+pygp7rmtIn433KPQ+GVPLBNDXsCwkVGEEtXFcyB/LDPH8E1XWGi/eo6AStyDMaOgRVgd361ro8TB3ttcct5+4E=', NULL, NULL, NULL
-    UNION ALL SELECT N'logs', N'change_tracking_framework', N'version', N'Information', NULL, NULL, N'ATTRIBUTE', N'4.1', NULL, NULL, NULL
+    UNION ALL SELECT N'logs', N'change_tracking_framework', N'version', N'Information', NULL, NULL, N'ATTRIBUTE', N'4.2', NULL, NULL, NULL
     ) s
     LEFT OUTER JOIN logs.handlers t ON
         t.TABLE_SCHEMA = s.TABLE_SCHEMA
