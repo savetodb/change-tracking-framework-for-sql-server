@@ -9,8 +9,6 @@ The framework is configured to execute these operations in free versions of the 
 - [DBGate for Windows and Linux](https://www.savetodb.com/dbgate.htm)
 - [ODataDB for Windows and Linux](https://www.savetodb.com/odatadb.htm)
 
-Please refer to the [Change Tracking Framework for SQL Server](https://www.savetodb.com/change-tracking-framework.htm) e-book and the framework [database documentation](https://www.savetodb.com/help/change-tracking-framework.htm).
-
 See also:
 
 - [Database Help Framework for SQL Server](https://github.com/savetodb/database-help-framework-for-sql-server)
